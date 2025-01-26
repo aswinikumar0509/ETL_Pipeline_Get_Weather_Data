@@ -32,7 +32,7 @@ with DAG(dag_id='weather_etl_pipeline',
         http_hook=HttpHook(http_conn_id=API_CONN_ID, method= 'GET')
 
         #  build the api endpoint
-        ##https://api.open-meteo.com/v1/forecast?latitude={51.5074}&longitude={-0.1278}&current_weather=true
+
         endpoint=f'/v1/forecast?latitude={LATITUDE}&longitude={LONGITUDE}&current_weather=true'
 
         ### Make the request via httlp hook
